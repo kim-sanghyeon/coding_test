@@ -29,6 +29,8 @@ jobs:
       run: |
         python upload.py
     - name: Commit changes
+      env:
+        GITHUB_TOKEN: ${{secrets.SECRET_TOKEN}}
       run: |
         git config --global user.name 'kim-sanghyeon'
         git config --global user.email 'sanghyeon2420@kakao.com'
